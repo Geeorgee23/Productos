@@ -1,0 +1,25 @@
+<odoo>
+  <data>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Gestion Productos" id="productos_app.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Operaciones" id="productos_app.menu_operaciones" parent="productos_app.menu_root"/>
+
+
+    <menuitem name="Clientes" id="productos_app.menu_clientes_list" parent="productos_app.menu_operaciones"
+              action="productos_app.action_window_clientes"/>
+
+
+    <menuitem name="Productos" id="productos_app.menu_productos_list" parent="productos_app.menu_operaciones"
+              action="productos_app.action_window_productos"/>
+              
+    <menuitem name="Facturas" id="productos_app.menu_facturas_list" parent="productos_app.menu_operaciones"
+              action="productos_app.action_window_facturas"/>
+
+
+  </data>
+</odoo>

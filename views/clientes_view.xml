@@ -1,0 +1,68 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="productos_app.listado_clientes_tree">
+      <field name="name">Clientes</field>
+      <field name="model">productos_app.clientes_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="dni"/>
+          <field name="name"/>
+          <field name="apellidos"/>
+          <field name="telf"/>
+          <field name="email" widget="email"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="productos_app.listado_clientes_form">
+      <field name="name">Clientes</field>
+      <field name="model">productos_app.clientes_model</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+
+            <notebook>
+              <page string="Datos Personales">
+                <group>
+                  <group>
+                    <field name="dni"/>
+                    <field name="name"/>
+                    <field name="apellidos"/>
+                    <field name="telf"/>
+                    <field name="email"/>
+                    
+                  </group>
+                  <group>
+                    <field name="foto" widget="image"/>
+                  </group>
+                </group>
+              </page>
+              
+              <page string="Facturas">
+                <group>
+                  <field name="factura"/>
+                </group>
+              </page>
+                
+              
+  
+            </notebook>
+          </sheet>
+          
+          
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="productos_app.action_window_clientes">
+      <field name="name">Clientes</field>
+      <field name="res_model">productos_app.clientes_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

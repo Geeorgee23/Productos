@@ -1,0 +1,41 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="productos_app.listado_productos_tree">
+      <field name="name">Productos</field>
+      <field name="model">productos_app.productos_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+
+        </tree>
+      </field>
+    </record>
+    
+
+    <record model="ir.ui.view" id="productos_app.listado_productos_form">
+      <field name="name">Productos</field>
+      <field name="model">productos_app.productos_model</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="descripcion"/>
+              <field name="pvp"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="productos_app.action_window_productos">
+      <field name="name">Productos</field>
+      <field name="res_model">productos_app.productos_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  </data>
+</odoo>

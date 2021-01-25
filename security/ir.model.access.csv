@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_productos_app_clientes_model,productos_app.clientes_model,model_productos_app_clientes_model,base.group_user,1,1,1,1
+access_productos_app_productos_model,productos_app.productos_model,model_productos_app_productos_model,base.group_user,1,1,1,1
+access_productos_app_facturas_model,productos_app.facturas_model,model_productos_app_facturas_model,base.group_user,1,1,1,1

@@ -1,0 +1,52 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="productos_app.listado_facturas_tree">
+      <field name="name">Facturas</field>
+      <field name="model">productos_app.facturas_model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="ref"/>
+          <field name="fecha"/>
+          <field name="base"/>
+          <field name="iva"/>
+          <field name="total"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="productos_app.listado_facturas_form">
+      <field name="name">Facturas</field>
+      <field name="model">productos_app.facturas_model</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+
+            <group>
+
+              <field name="ref"/>
+              <field name="fecha"/>
+              <field name="cliente"/>
+
+              <field name="base"/>
+              <field name="iva"/>
+              <field name="total"/>
+            </group>
+          </sheet>
+          
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="productos_app.action_window_facturas">
+      <field name="name">Facturas</field>
+      <field name="res_model">productos_app.facturas_model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+  </data>
+</odoo>
